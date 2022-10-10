@@ -16,12 +16,14 @@ public class BOJ11660_구간합구하기5 {
 		M = Integer.parseInt(st.nextToken());
 		nums = new int[N+1][N+1];
 		
+		// 가로 구간 합
 		for (int i = 1; i <= N; i++) {
 			st = new StringTokenizer(br.readLine());
-			for (int j = 1; j <= N; j++) {
+			for (int j = 1; j <= N; j++) { 
 				nums[i][j] = nums[i][j-1] + Integer.parseInt(st.nextToken());
 			}
 		}
+		// 가로 + 세로 구간 합
 		for (int i = 1; i <= N; i++) {
 			for (int j = 1; j <= N; j++) {
 				nums[i][j] += nums[i-1][j];
@@ -36,6 +38,7 @@ public class BOJ11660_구간합구하기5 {
 			int endX = Integer.parseInt(st.nextToken());
 			int endY = Integer.parseInt(st.nextToken());
 			
+			// 결과값 도출
 			ans = nums[endX][endY] - nums[startX-1][endY] - nums[endX][startY-1] + nums[startX-1][startY-1];
 			sb.append(ans).append("\n");			
 		}
