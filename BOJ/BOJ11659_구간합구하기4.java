@@ -3,7 +3,7 @@ package BOJ;
 import java.io.*;
 import java.util.*;
 
-public class BJ11659_구간합구하기4 {
+public class BOJ11659_구간합구하기4 {
 	static int N, M;
 	static int[] nums;
 	
